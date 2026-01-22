@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MATANGA</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/a932da47c7.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+    <img src="images/142077723_454054119309196_2409480220685062689_n.jpg" class="logo" alt="Logo">
+    <div class="menu">
+        <ul>
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="#Produits">Produits</a></li>
+            <li><a href="#Contact">Contact</a></li>
+        </ul>
+    </div>
+</header>
+
+    </header>
+    <body>
+        <div class="slider">
+  <div class="slide active" style="background-image: url('images/couverture 2.jpeg');">
+    <div class="slide-content">
+      <h1>Bienvenue chez MATANGA, marque 100% camerounaise</h1>
+    </div>
+  </div>
+
+  <div class="slide" style="background-image: url('images/couverture 3.jpeg');">
+    <div class="slide-content">
+      <h1>Vêtements et chaussures de qualité</h1>
+    </div>
+  </div>
+
+  <div class="slide" style="background-image: url('images/couverture 4.jpeg');">
+    <div class="slide-content">
+      <h1>Découvrez nos nouveautés chaque semaine</h1>
+    </div>
+  </div>
+</div>
+<script>
+  let index = 0;
+  const slides = document.querySelectorAll(".slide");
+
+  function showSlide() {
+    slides.forEach(slide => slide.classList.remove("active"));
+    slides[index].classList.add("active");
+    index = (index + 1) % slides.length;
+  }
+
+  setInterval(showSlide, 3000);
+</script>
+<section id="Produits">
+    <h1 class="souligner">NOS PRODUITS</h1>
+    <h2 class="h2">CHAUSSURES</h2>
+    <div class="images">
+        <ul>
+            <li class="paire">
+                <div>
+                    <img src="images/chaussures 1.jpeg" alt="Chaussure 1">
+                    <h3>SPADRIL</h3>
+                </li>
+                <li class="paire">
+                <div>
+                    <img src="images/image 5.jpg" alt="Chaussure 1">
+                    <h3>RESPONSABLE</h3>
+                </li>
+                <li class="paire">
+                <div>
+                    <img src="images/chaussures 3.jpeg" alt="Chaussure 1">
+                    <h3>SNEAKERS</h3>
+                </li>
+                <li class="paire">
+                <div>
+                    <img src="images/chaussures 4.jpeg" alt="Chaussure 1">
+                    <h3>BABOUCHES</h3>
+                </li>
+            </ul>
+        </div>
+    </section>
+    <section id="chaussure">
+    <h2 class="h2">VETEMENTS</h2>
+    <div class="images">
+        <ul>
+            <li class="paire">
+                <div>
+                    <img src="images/t-shirt1.jpeg" alt="Chaussure 1">
+                    <h3>T-SHIRTS</h3>
+                </li>
+                <li class="paire">
+                <div>
+                    <img src="images/chemises.jpeg" alt="Chaussure 1">
+                    <h3>CHEMISES</h3>
+                </li>
+                <li class="paire">
+                <div>
+                    <img src="images/casquettes.jpeg" alt="Chaussure 1">
+                    <h3>CASQUETTES</h3>
+                </li>
+                <li class="paire">
+                <div>
+                    <img src="images/veste.jpeg" alt="Chaussure 1">
+                    <h3>VESTES</h3>
+                </li>
+            </ul>
+        </div>
+    </section>
+        <!-- footer section-->
+    <section class="footer" id="Contact">
+                    <footer>
+                    <div class="footer-content">
+                        <img src="images/142077723_454054119309196_2409480220685062689_n.jpg" alt="Logo Matanga" class="footer-logo">
+                        <p>MATANGA EST UNE MARQUE DE VETEMENTS ET DE CHAUSSURES 100% CAMEROUNAISE METTANT EN VALEUR LA CULTURE CAMEROUNAISE ET AFRICAINE</p>
+                        <div class="contact-info">
+    <p>
+        <i class="fa-solid fa-phone"></i>
+        CONTACT : 697700208
+    </p>
+
+    <p>
+        <i class="fa-solid fa-location-dot"></i>
+        LIEU : DOUALA, BALI JAMAICA BAR
+    </p>
+</div>
+                        <ul class="socials">
+                            <li><a href="https://www.tiktok.com/@matangabrand?_r=1&_t=ZS-93I8lO9bKZV"><i class="fa-brands fa-tiktok"></i></a></li>
+                            <li><a href="https://www.facebook.com/share/1AWew54AoY/?mibextid=wwXIfr"><i class="fa-brands fa-facebook-f"></i></a></li>
+                            <li><a href="https://www.instagram.com/matangabrand?igsh=MTd2N3U3bzh3MHZkdA=="><i class="fa-brands fa-instagram"></i></a></li>
+                            <li><a href="https://www.tiktok.com/link/v2?aid=1988&lang=en&scene=bio_url&target=https%3A%2F%2Fwa.me%2Fc%2F237697700208"><i class="fa-brands fa-whatsapp"></i></a></li>
+                        </ul>    
+                            <form class="contact-form"action="https://formspree.io/f/{form_id}" method="post" >
+                            <h2>Contactez-nous</h2>
+                            <label>Nom</label>
+                             <input type="text" placeholder="Votre nom" required>
+
+                            <label>Email</label>
+                             <input type="email" placeholder="Votre email" required>
+
+                            <label>Message</label>
+                            <textarea placeholder="Votre message" required></textarea>
+
+                             <button type="submit">Envoyer</button>
+
+                            </form>
+
+    </section>
+                 <!-- fin footer section-->                       
+
+</body>
+</html>
