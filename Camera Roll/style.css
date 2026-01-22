@@ -1,0 +1,259 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Anton", sans-serif;
+}
+header {
+    display: flex;
+    align-items: center;   /* centre verticalement logo et menu */
+    padding: 10px 20px;
+    position: relative;    /* pour que le menu centré soit relatif à l’en-tête */
+    background-color: #fff;
+}
+
+/* Logo à gauche */
+.logo {
+    width: 100px;
+}
+
+/* Menu centré */
+.menu {
+    position: absolute;
+    left: 50%;             /* position horizontale du milieu de l'écran */
+    transform: translateX(-50%); /* centre parfaitement le menu */
+    display: flex;
+    gap: 20px;             /* espace entre les liens */
+}
+
+
+
+
+.menu ul{
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.menu  a{
+    margin-left: 20px;
+    text-transform: capitalize;
+    font-size: 13px;
+    color: #000;
+    text-decoration: none;
+    position: relative;
+}
+.menu  a::after {
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 0;
+    height: 2px;
+    background: #0d10cf;
+    transition: 0.1s ease-out;
+    content: "";
+}
+.menu  a:hover::after {
+    width: 100%;
+}
+
+/* Slider */
+.slider {
+    position: relative;
+    width: 100%;
+    height: 500px; /* Hauteur de la diapo */
+    overflow: hidden;
+}
+
+/* Chaque slide */
+.slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    display: flex;             /* active flexbox pour centrer le contenu */
+    justify-content: center;   /* centre horizontalement */
+    align-items: center;       /* centre verticalement */
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+/* Slide active */
+.slide.active {
+    opacity: 1;
+}
+
+/* Texte sur la slide */
+.slide-content {
+    text-align: center;       /* centre le texte à l’intérieur */
+}
+
+.slide-content h1 {
+    font-size: 2rem;
+    color: white;
+    background-color: rgba(0,0,0,0.5); /* fond semi-transparent pour lisibilité */
+    padding: 15px 30px;
+    border-radius: 10px;
+}
+
+.slider.h1 {
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.slide.h1 {
+  font-size: 36px;
+    background-position: center;
+    text-align: center;
+}
+#chaussure {
+    padding: 50px;
+    text-align: center;
+    background-color: #f5f5f5;
+}
+.section-title {
+    text-transform: uppercase;
+    position: relative;
+    color: #000;
+}
+.souligner{
+   text-decoration: underline; 
+   text-decoration-color: #004ef7;
+    text-align: center;
+    margin-top:100px;
+}
+.images{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    flex-wrap: wrap;
+}
+.images li{
+    list-style: none;
+    margin: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 200px;
+    height: 300px;
+}
+.images li div img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+.images ul{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.h2{
+    color: #010107;
+    text-align: center;
+    margin-top: 50px;
+    text-decoration: underline;
+    text-decoration-color: rgb(44, 13, 218);
+}
+.footer p{
+    text-align: center;
+    margin-bottom: 20px;
+    color: #130c0c;
+}
+.footer-logo{
+    width: 150px;      /* taille de l’image */
+    margin: 10px auto; /* centrage */
+    display: block;
+}
+.contact-form {
+  width: 300px;
+  margin: 50px auto;
+  padding: 20px;
+  background: #f5f5f5;
+  border-radius: 10px;
+  font-family: Arial, sans-serif;
+}
+
+.contact-form h2 {
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.contact-form label {
+  display: block;
+  margin-top: 10px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.contact-form button {
+  margin-top: 15px;
+  width: 100%;
+  padding: 10px;
+  background: #1235cf;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.contact-form button:hover {
+  background: #0056b3;
+}
+.socials{
+    display: flex;
+    justify-content: center; /* centre horizontalement */
+    align-items: center;
+    list-style: none;
+    padding: 0;
+    margin: 0 auto;
+}
+
+.socials li{
+    margin: 0 15px; /* espace entre les icônes */
+}
+
+.socials a{
+    font-size: 25px;
+    color: #000;
+    text-decoration: none;
+}
+.contact-info{
+    display: flex;
+    flex-direction: column;
+    align-items: center;      /* centre horizontalement */
+    text-align: center;
+}
+
+.contact-info p{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 5px 0;
+    font-weight: bold;
+}
+
+.contact-info i{
+    font-size: 18px;
+}
+
+
+
