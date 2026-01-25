@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>XENDERBABER</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/a932da47c7.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+    <img src="logo xenderbarber .jpeg" class="logo" alt="Logo">
+    <div class="menu">
+        <ul>
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="#Services">services</a></li>
+            <li><a href="#Contact">Contact</a></li>
+        </ul>
+    </div>
+</header>
+
+    </header>
+    <body>
+        <div class="slider">
+  <div class="slide active" style="background-image: url('imagexb0.jpeg');">
+    <div class="slide-content">
+      <h1>Bienvenue chez XENDERBABER</h1>
+    </div>
+  </div>
+
+  <div class="slide" style="background-image: url('imagexb1.jpeg');">
+    <div class="slide-content">
+      <h1>Pour tous vos besoin de coiffure, soins de visage, manicure-pedicure de qualité</h1>
+    </div>
+  </div>
+
+  <div class="slide" style="background-image: url('imagexb2.jpeg');">
+    <div class="slide-content">
+      <h1>venez decouvrir nos services</h1>
+    </div>
+  </div>
+</div>
+<script>
+  let index = 0;
+  const slides = document.querySelectorAll(".slide");
+
+  function showSlide() {
+    slides.forEach(slide => slide.classList.remove("active"));
+    slides[index].classList.add("active");
+    index = (index + 1) % slides.length;
+  }
+
+  setInterval(showSlide, 3000);
+</script>
+<section id="Services">
+    <h1 class="souligner">NOS SERVICES</h1>
+    <h2 class="h2">COIFFURE</h2>
+    <div class="images">
+        <ul>
+            <li class="paire">
+                <div>
+                    <img src="photoxb1.jpeg" alt="Chaussure 1">
+                    <h3></h3>
+                </li>
+                <li class="paire">
+                <div>
+                    <img src="photoxb2.jpeg" alt="Chaussure 1">
+                    <h3></h3>
+                </li>
+                <li class="paire">
+                <div>
+                    <img src="photoxb3.jpeg" alt="Chaussure 1">
+                    <h3></h3>
+                </li>
+            </ul>
+        </div>
+    </section>
+        <!-- footer section-->
+    <section class="footer" id="Contact">
+                    <footer>
+                    <div class="footer-content">
+                        <img src="logo xenderbarber .jpeg" alt="Logo XENDERBABER" class="footer-logo">
+                        <p>MATANGA EST UNE MARQUE DE VETEMENTS ET DE CHAUSSURES 100% CAMEROUNAISE METTANT EN VALEUR LA CULTURE CAMEROUNAISE ET AFRICAINE</p>
+                        <div class="contact-info">
+    <p>
+        <i class="fa-solid fa-phone"></i>
+        CONTACT : 655658047
+    </p>
+
+    <p>
+        <i class="fa-solid fa-location-dot"></i>
+        LIEU : DOUALA, JAPOMA COCOTIER
+    </p>
+</div>
+                        <ul class="socials">
+                            <li><a href="#"><i class="fa-brands fa-tiktok"></i></a></li>
+                            <li><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
+                            <li><a href="https://www.instagram.com/xender_barber?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="><i class="fa-brands fa-instagram"></i></a></li>
+                            <li><a href="#"><i class="fa-brands fa-whatsapp"></i></a></li>
+                        </ul>    
+    </section>
+                 <!-- fin footer section-->                       
+
+</body>
+</html>
